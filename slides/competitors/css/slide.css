@@ -1,0 +1,86 @@
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgb(0, 123, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.chart-container {
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#chart {
+  width: 500px;
+  height: 500px;
+}
+#chart path {
+  opacity: 0.9;
+}
+#chart path.active {
+  animation: blink 1.5s linear infinite;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  font-size: 16px;
+  color: #333333;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.legend .legend-item .legend-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.legend .legend-item.active {
+  font-weight: bold;
+  transform: translateX(-40px);
+}
+
+/*# sourceMappingURL=slide.css.map */

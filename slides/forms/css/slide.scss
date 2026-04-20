@@ -1,0 +1,116 @@
+@import '../../../shared/css/variables.scss';
+
+.card-container {
+  width: $viewport-width;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: $shadow-lg;
+
+    span {
+      padding: 15px;
+      background: #fff;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-sm;
+      }
+    }
+
+    &.card-1 {
+      padding: 20px 30px;
+      background: $popup-kids-bg;
+      border-radius: $border-radius-lg;
+    }
+
+    &.card-2 {
+      padding: 20px 0;
+      background: $popup-local-bg;
+      border-radius: $border-radius-lg;
+
+      span {
+        margin: 0 30px;
+      }
+    }
+
+    &.card-3 {
+      padding: 20px;
+      background: $popup-adult-bg;
+      border-radius: $border-radius-lg;
+
+      span {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.popup-window {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-md;
+
+    img {
+      margin-bottom: 10px;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+    }
+
+    .text {
+      width: 400px;
+      height: 100%;
+      padding: 20px;
+      font-size: 14px;
+      color: #333333;
+      background-color: #fff;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+#popup-kids {
+  .container {
+    background-color: $popup-kids-bg;
+  }
+}
+
+#popup-local {
+  .container {
+    background-color: $popup-local-bg;
+  }
+
+  .container-2 {
+    img {
+      padding: 30px 36px;
+      background: #fff;
+    }
+  }
+}
+
+#popup-adult {
+  .container {
+    background-color: $popup-adult-bg;
+  }
+}

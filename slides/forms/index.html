@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Формы выпуска</title>
+    <link rel="stylesheet" href="../../shared/css/app.css" />
+    <link rel="stylesheet" href="./css/slide.css" />
+  </head>
+  <body data-slide="forms">
+    <div class="viewport">
+      <div class="slide-frame start-slide">
+        <h1>Формы выпуска препарата</h1>
+        <div class="card-container">
+          <div class="card card-1">
+            <img src="./img/boy.png" alt="boy" width="240" />
+            <span class="i-trigger" data-class="active" data-target="#popup-kids">Ребенок</span>
+          </div>
+          <div class="card card-2">
+            <img src="./img/girl.png" alt="girl" width="300" />
+            <span class="i-trigger" data-class="active" data-target="#popup-local"
+              >Локальная боль</span
+            >
+          </div>
+          <div class="card card-3">
+            <img src="./img/woman.png" alt="adult" width="260" />
+            <span class="i-trigger" data-class="active" data-target="#popup-adult">Взрослый</span>
+          </div>
+        </div>
+        <div id="hub"></div>
+      </div>
+      <div class="popup" id="popup-kids">
+        <article class="popup-content">
+          <div class="popup-window">
+            <div class="container container-1">
+              <img src="./img/kids-1.png" alt="kids-1" width="400" />
+              <div class="text">
+                «Ибупрофен ВП» — суспензия для приёма внутрь для детей из группы нестероидных
+                противовоспалительных препаратов (НПВП). Действующее вещество — ибупрофен, который
+                оказывает обезболивающее, жаропонижающее и противовоспалительное действие.
+              </div>
+            </div>
+            <div class="container container-2">
+              <img src="./img/kids-2.png" alt="kids-2" width="400" />
+              <div class="text">
+                Суппозитории «Ибупрофен» — нестероидный противовоспалительный препарат (НПВП) в форме
+                ректальных суппозиториев для детей. Действующее вещество — ибупрофен (60 мг).
+              </div>
+            </div>
+            <div class="btn-close i-trigger" data-toggle="active" data-target="#popup-kids">✕</div>
+          </div>
+        </article>
+      </div>
+      <div class="popup" id="popup-local">
+        <article class="popup-content">
+          <div class="popup-window">
+            <div class="container container-1">
+              <img src="./img/local-1.png" alt="local-1" width="400" />
+              <div class="text">
+                «Ибупрофен» — нестероидный противовоспалительный препарат (НПВП) в форме геля для
+                наружного применения. Оказывает обезболивающее и противовоспалительное действие.
+              </div>
+            </div>
+            <div class="container container-2">
+              <img src="./img/local-2.png" alt="local-2" width="400" />
+              <div class="text">
+                «Ибупрофен-Вертекс» — гель для наружного применения, нестероидный
+                противовоспалительный препарат (НПВП).
+              </div>
+            </div>
+            <div class="btn-close i-trigger" data-toggle="active" data-target="#popup-local">✕</div>
+          </div>
+        </article>
+      </div>
+      <div class="popup" id="popup-adult">
+        <article class="popup-content">
+          <div class="popup-window">
+            <div class="container container-1">
+              <img src="./img/adult-1.png" alt="adult-1" width="400" />
+              <div class="text">
+                «Ибупрофен Канон» — нестероидный противовоспалительный препарат (НПВП) в форме капсул.
+                Действующее вещество — ибупрофен.
+              </div>
+            </div>
+            <div class="container container-2">
+              <img src="./img/adult-2.png" alt="adult-2" width="400" />
+              <div class="text">
+                «Ибупрофен-Белмедпрепараты» — таблетки, покрытые плёночной оболочкой, производитель —
+                «Белмедпрепараты» (Беларусь).
+              </div>
+            </div>
+            <div class="btn-close i-trigger" data-toggle="active" data-target="#popup-adult">✕</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+  <script src="../../shared/js/tracker.js"></script>
+  <script src="../../shared/js/app.js"></script>
+  <script src="./js/slide.js"></script>
+</html>

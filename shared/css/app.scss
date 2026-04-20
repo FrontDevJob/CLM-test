@@ -1,0 +1,127 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: 'GeologicaRegular';
+  src: url('fonts/Geologica/Geologica-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GeologicaRegular';
+}
+
+.viewport {
+  width: $viewport-width;
+  height: $viewport-height;
+  transform-origin: 0 0;
+  overflow: hidden;
+}
+
+.slide-frame {
+  width: $viewport-width;
+  height: $viewport-height;
+  position: relative;
+  overflow: hidden;
+  background: $slide-gradient;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  color: $blue-primary;
+  font-size: 48px;
+}
+
+#hub {
+  position: absolute;
+  bottom: 0;
+
+  img {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+}
+
+.popup {
+  width: $viewport-width;
+  height: $viewport-height;
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transform: scale(0);
+  transition:
+    opacity 0.5s ease,
+    transform 0.1s 0.5s ease;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.2s;
+
+    article {
+      transform: translate(0, 0);
+      transition: all 0.3s ease 0.2s;
+    }
+  }
+
+  article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY($viewport-height);
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease;
+
+    .popup-window {
+      width: 900px;
+      height: 568px;
+      background-color: #fff;
+      border-radius: $border-radius-lg;
+
+      position: absolute;
+      left: 56px;
+      top: 100px;
+
+      .btn-close {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f4f8;
+        color: #333333;
+        border-radius: 50%;
+        padding: 20px;
+        font-size: 28px;
+        cursor: pointer;
+
+        position: absolute;
+        top: -25px;
+        right: 0px;
+
+        @include transition;
+        box-shadow: $shadow-md;
+
+        &:hover {
+          background-color: $blue-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

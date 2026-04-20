@@ -1,0 +1,124 @@
+// Цветовая схема
+$primary-color: #0b7b8c;
+$title-color: #1a3a4f;
+$text-color: #2c5a6e;
+$light-text: #1a4a5e;
+$gray-text: #7a9aae;
+
+$blue-primary: #007bff;
+$blue-dark: #0b7b8c;
+$blue-light: #0d8a9e;
+
+// Эффекты
+$pain-color: #f59e0b;
+$inflammation-color: #ef4444;
+$fever-color: #3b82f6;
+
+// Скругления
+$border-radius-lg: 32px;
+$border-radius-md: 22px;
+$border-radius-sm: 20px;
+$border-radius-xs: 16px;
+
+// Карточки
+$card-1-bg: linear-gradient(135deg, #fff8eb 0%, #fff3e0 100%);
+$card-1-border: #f59e0b;
+$card-1-title: #d97706;
+
+$card-2-bg: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+$card-2-border: #22c55e;
+$card-2-title: #16a34a;
+
+$card-3-bg: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+$card-3-border: #3b82f6;
+$card-3-title: #2563eb;
+
+$card-4-bg: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+$card-4-border: #a855f7;
+$card-4-title: #9333ea;
+
+// Попапы
+$popup-kids-bg: #fcccc4;
+$popup-local-bg: #eaf7ff;
+$popup-adult-bg: #e8fff1;
+
+// Вьюпорт
+$viewport-width: 1024px;
+$viewport-height: 768px;
+
+// Тени
+$shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.18);
+$shadow-md: 0 4px 10px rgba(0, 123, 255, 0.2);
+$shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.18);
+$shadow-xl: 0 10px 25px rgba(0, 0, 0, 0.55);
+$shadow-blue: 0 4px 12px rgba(11, 123, 140, 0.3);
+$shadow-blue-hover: 0 8px 20px rgba(11, 123, 140, 0.4);
+
+// Градиенты фона слайдов
+$slide-gradient: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 40%, #a5f3fc 100%);
+
+// Анимации
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(0, 123, 255, 1));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(0, 123, 255, 1));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgba(0, 123, 255, 1));
+  }
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+// Миксины
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.2s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+@mixin hover-lift($lift: -6px) {
+  &:hover {
+    transform: translateY($lift);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin glass-effect($blur: 10px) {
+  backdrop-filter: blur($blur);
+  background: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgb(0, 123, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+h1 span {
+  color: #0b7b8c;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  padding: 15px 100px 0 100px;
+}
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.card-container .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.1);
+}
+.card-container .card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.card-container .card .card-text {
+  width: 320px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #2c5a6e;
+}
+.card-container .card .card-text ul {
+  display: flex;
+  gap: 15px;
+}
+.card-container .card .card-text ul li {
+  list-style-type: none;
+}
+.card-container .card .card-text ul li::before {
+  content: "✔ ";
+  padding-right: 0;
+  color: red;
+}
+.card-container .card-1 {
+  background: linear-gradient(135deg, #fff8eb 0%, #fff3e0 100%);
+  border-left: 6px solid #f59e0b;
+}
+.card-container .card-1 h2 {
+  color: #d97706;
+}
+.card-container .card-2 {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 6px solid #22c55e;
+}
+.card-container .card-2 h2 {
+  color: #16a34a;
+}
+.card-container .card-3 {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 6px solid #3b82f6;
+}
+.card-container .card-3 h2 {
+  color: #2563eb;
+}
+.card-container .card-4 {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-left: 6px solid #a855f7;
+}
+.card-container .card-4 h2 {
+  color: #9333ea;
+}
+
+/*# sourceMappingURL=slide.css.map */

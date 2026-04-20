@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgb(0, 123, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#chart {
+  margin-top: 40px;
+  margin-left: 87px;
+}
+
+.grid-line {
+  stroke: rgba(0, 0, 0, 0.08);
+  stroke-width: 1;
+}
+
+.axis-text {
+  font-size: 12px;
+  fill: #666;
+}
+
+.y-label {
+  font-size: 12px;
+  fill: #999;
+}
+
+.line {
+  fill: none;
+  stroke: #007bff;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.point {
+  fill: #007bff;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+}
+.point.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.1s;
+}
+.point:hover {
+  stroke: #fff;
+  stroke-width: 1px;
+  animation: blink-shadow 1s linear infinite;
+}
+.point.last {
+  r: 16;
+  animation: blink-shadow 1.5s linear infinite;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.note {
+  position: absolute;
+  bottom: 130px;
+  left: 87px;
+  right: 87px;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b7b8c;
+  text-align: center;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(11, 123, 140, 0.08), transparent);
+  border-top: 1px solid rgba(11, 123, 140, 0.2);
+  border-bottom: 1px solid rgba(11, 123, 140, 0.2);
+}
+
+.btn-competitors {
+  position: absolute;
+  bottom: 70px;
+  left: 372px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #0b7b8c, #0a5a6b);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(11, 123, 140, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-competitors::before {
+  content: "📊";
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+.btn-competitors:hover {
+  background: linear-gradient(135deg, #0d8a9e, #0c6a7a);
+  box-shadow: 0 8px 20px rgba(11, 123, 140, 0.4);
+  transform: translateY(-2px);
+}
+.btn-competitors:hover::before {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=slide.css.map */

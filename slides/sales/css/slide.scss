@@ -1,0 +1,115 @@
+@import '../../../shared/css/variables.scss';
+
+#chart {
+  margin-top: 40px;
+  margin-left: 87px;
+}
+
+.grid-line {
+  stroke: rgba(0, 0, 0, 0.08);
+  stroke-width: 1;
+}
+
+.axis-text {
+  font-size: 12px;
+  fill: #666;
+}
+
+.y-label {
+  font-size: 12px;
+  fill: #999;
+}
+
+.line {
+  fill: none;
+  stroke: $blue-primary;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.point {
+  fill: $blue-primary;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.1s;
+  }
+
+  &:hover {
+    stroke: #fff;
+    stroke-width: 1px;
+    animation: blink-shadow 1s linear infinite;
+  }
+
+  &.last {
+    r: 16;
+    animation: blink-shadow 1.5s linear infinite;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: $shadow-md;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.note {
+  position: absolute;
+  bottom: 130px;
+  left: 87px;
+  right: 87px;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary-color;
+  text-align: center;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(11, 123, 140, 0.08), transparent);
+  border-top: 1px solid rgba(11, 123, 140, 0.2);
+  border-bottom: 1px solid rgba(11, 123, 140, 0.2);
+}
+
+.btn-competitors {
+  position: absolute;
+  bottom: 70px;
+  left: 372px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, $primary-color, #0a5a6b);
+  border: none;
+  border-radius: 40px;
+  box-shadow: $shadow-blue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '📊';
+    font-size: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, $blue-light, #0c6a7a);
+    box-shadow: $shadow-blue-hover;
+    transform: translateY(-2px);
+
+    &::before {
+      transform: scale(1.2);
+    }
+  }
+}

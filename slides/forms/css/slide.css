@@ -1,0 +1,134 @@
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgb(0, 123, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card-container {
+  width: 1024px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+.card-container .card span {
+  padding: 15px;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.card-container .card span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+}
+.card-container .card.card-1 {
+  padding: 20px 30px;
+  background: #fcccc4;
+  border-radius: 32px;
+}
+.card-container .card.card-2 {
+  padding: 20px 0;
+  background: #eaf7ff;
+  border-radius: 32px;
+}
+.card-container .card.card-2 span {
+  margin: 0 30px;
+}
+.card-container .card.card-3 {
+  padding: 20px;
+  background: #e8fff1;
+  border-radius: 32px;
+}
+.card-container .card.card-3 span {
+  margin: 0 10px;
+}
+
+.popup-window {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+}
+.popup-window .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 32px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+.popup-window .container img {
+  margin-bottom: 10px;
+  border-radius: 32px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+.popup-window .container .text {
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+#popup-kids .container {
+  background-color: #fcccc4;
+}
+
+#popup-local .container {
+  background-color: #eaf7ff;
+}
+#popup-local .container-2 img {
+  padding: 30px 36px;
+  background: #fff;
+}
+
+#popup-adult .container {
+  background-color: #e8fff1;
+}
+
+/*# sourceMappingURL=slide.css.map */

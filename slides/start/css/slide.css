@@ -1,0 +1,68 @@
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes blink-shadow {
+  0% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgb(0, 123, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgb(0, 123, 255));
+  }
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+  column-gap: 30px;
+  width: 800px;
+  margin: 60px auto 0;
+}
+.nav .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  font-size: 26px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #007bff;
+  border-radius: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.nav .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
+}
+
+/*# sourceMappingURL=slide.css.map */

@@ -1,0 +1,32 @@
+@import '../../../shared/css/variables.scss';
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+  column-gap: 30px;
+  width: 800px;
+  margin: 60px auto 0;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 150px;
+    font-size: 26px;
+    color: #ffffff;
+    text-align: center;
+    background-color: $blue-primary;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-xl;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
+    }
+  }
+}
